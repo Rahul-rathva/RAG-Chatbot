@@ -1,0 +1,21 @@
+# RAG Chatbot Dependencies
+# ========================
+# Each package is listed with an explanation of WHY it's needed, not just what it is.
+
+sentence-transformers  # Converts text into numerical vectors (embeddings). Runs LOCALLY — no API key needed.
+                       # Uses pre-trained transformer models from HuggingFace. We use 'all-MiniLM-L6-v2'.
+
+chromadb               # The vector database. Stores embeddings and lets us search them by semantic similarity.
+                       # Runs entirely on your local machine — no server setup required.
+
+groq                   # Official Python client for the Groq API. Groq provides extremely fast LLM inference
+                       # using custom hardware (LPUs). Free tier is generous — no credit card needed.
+
+python-dotenv          # Loads environment variables from a .env file into os.environ.
+                       # Keeps secrets (like your API key) out of your code files.
+
+torch                  # PyTorch — the deep learning framework that sentence-transformers runs on top of.
+                       # sentence-transformers can't compute embeddings without it.
+
+tqdm                   # Displays progress bars in the terminal. Used during ingestion so you know
+                       # how many documents have been processed. Small but improves usability a lot.

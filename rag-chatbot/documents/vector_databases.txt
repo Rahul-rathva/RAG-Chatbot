@@ -1,0 +1,31 @@
+Vector Databases Explained
+
+A vector database is a specialized database designed to store, index, and search high-dimensional numerical vectors efficiently. Unlike traditional databases that match exact values, vector databases find items that are semantically similar — meaning they find things with related meaning even if the words are different.
+
+Why Vector Databases Exist:
+
+Traditional databases like PostgreSQL or MySQL are excellent at exact queries: "find all users where age > 30" or "find all products with price = 9.99". But they cannot answer questions like "find documents that are conceptually similar to this paragraph." For that, you need vectors and a database built around them.
+
+What is a Vector?
+
+When machine learning models process text, images, or other data, they convert it into a list of numbers called a vector or embedding. For example, a sentence might become a list of 384 numbers. These numbers capture the semantic meaning of the text in mathematical space. Similar sentences end up with vectors that are close together in this space.
+
+How Similarity Search Works:
+
+The most common way to measure similarity between vectors is cosine similarity. Imagine two vectors as arrows pointing in different directions from the origin. Cosine similarity measures the angle between these arrows. A small angle (similar direction) means high similarity. A large angle means the items are semantically different. Cosine similarity scores range from -1 (opposite) to 1 (identical).
+
+Why Not Just Use Regular Databases?
+
+If you stored embeddings in a regular database and wanted to find the most similar one to a query, you'd have to compute the distance between the query and every single stored vector. With millions of documents, this is impossibly slow. Vector databases use special indexing algorithms like HNSW (Hierarchical Navigable Small World graphs) or IVF (Inverted File Index) that let you find approximate nearest neighbors in milliseconds without checking every entry.
+
+ChromaDB:
+
+ChromaDB is an open-source vector database designed to be simple to use. It runs locally in Python with no separate server process required. It supports multiple distance metrics, metadata filtering, and can persist data to disk. It's excellent for learning and small to medium projects. For production at scale, alternatives like Pinecone, Weaviate, or Qdrant are common choices.
+
+Common Use Cases:
+
+Semantic search: Find documents relevant to a natural language query.
+Recommendation systems: Find items similar to ones a user already likes.
+Deduplication: Find near-duplicate records in a dataset.
+RAG systems: Retrieve relevant context to augment LLM responses.
+Anomaly detection: Find vectors that are far from all others.

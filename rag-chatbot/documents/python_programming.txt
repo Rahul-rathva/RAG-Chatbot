@@ -1,0 +1,27 @@
+Python Programming Language
+
+Python is a high-level, interpreted programming language known for its readability and versatility. Created by Guido van Rossum and first released in 1991, Python has become one of the most popular programming languages in the world.
+
+Python uses indentation to define code blocks, which forces consistent formatting and makes code easier to read. Unlike languages like Java or C++ that use curly braces, Python's whitespace-based syntax means that well-indented code is syntactically correct.
+
+Key Python concepts:
+
+Variables and Types: Python is dynamically typed — you don't declare variable types explicitly. The interpreter figures out types at runtime. Python supports integers, floats, strings, booleans, lists, tuples, dictionaries, and sets.
+
+Functions: Defined with the 'def' keyword. Python functions are first-class objects — they can be passed as arguments, returned from other functions, and stored in variables. Lambda functions provide short anonymous functions.
+
+List Comprehensions: A concise way to create lists. Instead of a for loop to build a list, you can write [x*2 for x in range(10)]. This is more Pythonic and often faster.
+
+Object-Oriented Programming: Python supports classes and inheritance. The 'self' parameter refers to the instance of the class. Python uses duck typing — if an object has the right methods, it can be used in place of another type.
+
+Decorators: A way to modify or extend function behavior without changing the function itself. The @property decorator lets you define methods that behave like attributes. @staticmethod and @classmethod modify how methods relate to their class.
+
+Context Managers: The 'with' statement ensures resources are cleaned up properly. When you open a file with 'with open() as f', Python automatically closes the file when the block ends, even if an exception occurs.
+
+Python's standard library is vast — it includes modules for file I/O, networking, regular expressions, JSON handling, datetime operations, and much more. The philosophy is "batteries included."
+
+Virtual environments isolate project dependencies. Using venv or conda prevents package version conflicts between projects.
+
+pip is Python's package manager. The Python Package Index (PyPI) hosts over 400,000 packages. You install packages with 'pip install package-name' and list dependencies in requirements.txt.
+
+Python is popular in data science because of libraries like NumPy (numerical computing), Pandas (data manipulation), Matplotlib (visualization), and Scikit-learn (machine learning).

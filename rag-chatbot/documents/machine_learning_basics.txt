@@ -1,0 +1,19 @@
+Machine Learning Basics
+
+Machine learning is a subset of artificial intelligence where systems learn from data to make predictions or decisions without being explicitly programmed for each task. Instead of writing rules by hand, you show the system many examples and it figures out the patterns itself.
+
+There are three main types of machine learning:
+
+Supervised Learning: The model is trained on labeled data — pairs of inputs and correct outputs. For example, showing thousands of emails labeled "spam" or "not spam" so the model learns to classify new emails. Common algorithms include linear regression, decision trees, and neural networks.
+
+Unsupervised Learning: The model finds patterns in data without labels. It discovers hidden structure on its own. Clustering algorithms like K-means group similar data points together. This is useful when you don't know the categories in advance.
+
+Reinforcement Learning: An agent learns by interacting with an environment and receiving rewards or penalties. Like training a dog with treats — the agent tries actions, gets feedback, and gradually learns which actions lead to good outcomes. This is how AlphaGo learned to play chess.
+
+Neural networks are loosely inspired by the human brain. They consist of layers of nodes (neurons) connected by weighted edges. The network adjusts weights during training using backpropagation — a technique that figures out which weights contributed to errors and adjusts them accordingly.
+
+Overfitting is a common problem: the model memorizes the training data instead of learning general patterns. It performs well on training data but fails on new data. Techniques like regularization, dropout, and cross-validation help prevent this.
+
+Feature engineering is the process of transforming raw data into inputs that machine learning models can use effectively. Good features can dramatically improve model performance.
+
+Transfer learning lets you take a model trained on one task and fine-tune it for a related task. This saves enormous amounts of time and data. For example, a model trained on millions of images can be fine-tuned to recognize specific medical scans with far less data than training from scratch.
